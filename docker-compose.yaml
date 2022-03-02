@@ -1,6 +1,7 @@
 services:
   fsp:
     image: jacobneiltaylor/fspd:latest
+    restart: unless-stopped
     ports:
       - "21:21/udp"
     volumes:
