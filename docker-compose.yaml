@@ -5,5 +5,5 @@ services:
     ports:
       - "21:21/udp"
     volumes:
-      - "./fspd.conf:/usr/local/etc/fspd.conf:ro"
-      - "./data:/fsp:ro"
+      - "${FSPD_CONF_FILE:-./fspd.conf}:/usr/local/etc/fspd.conf:ro"
+      - "${FSPD_DATA_DIR:-./data}:/fsp:${FSPD_DATA_MODE:-ro}"
