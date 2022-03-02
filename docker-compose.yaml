@@ -1,0 +1,9 @@
+services:
+  fsp:
+    build: .
+    image: jacobneiltaylor/fspd
+    ports:
+      - "21:21/udp"
+    volumes:
+      - "./fspd.conf:/usr/local/etc/fspd.conf:ro"
+      - "./data:/fsp:ro"
