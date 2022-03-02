@@ -1,6 +1,7 @@
 services:
-  fsp:
+  fspd:
     image: jacobneiltaylor/fspd:latest
+    container_name: fspd
     restart: unless-stopped
     ports:
       - "21:21/udp"
