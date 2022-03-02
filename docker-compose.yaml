@@ -1,7 +1,6 @@
 services:
   fsp:
-    build: .
-    image: jacobneiltaylor/fspd
+    image: jacobneiltaylor/fspd:latest
     ports:
       - "21:21/udp"
     volumes:
